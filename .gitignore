@@ -35,3 +35,6 @@ Thumbs.db
 /app/tmp/tests/*
 !/app/tmp/tests/
 !/app/tmp/tests/empty
+
+# Private Folder
+/private/*

@@ -2,6 +2,16 @@
 web1:
   name: ikdashboard
   document_root: /app/webroot
+  before_deploy:
+    - "mkdir -p app/tmp/cache/models"
+    - "mkdir app/tmp/cache/persistent"
+    - "mkdir app/tmp/cache/views"
+    - "mkdir app/tmp/logs"
+    - "mkdir app/tmp/sessions"
+    - "mkdir app/tmp/tests"
+    - "app/Console/cake Migrations.migration all"
+  after_build:
+    - "mv app/Config/database.php.pagoda app/Config/database.php"
   shared_writable_dirs:
     - app/tmp
     - app/tmp/cache
@@ -16,10 +26,6 @@ web1:
     - mbstring
     - pdo_mysql
     - apc
-  before_deploy:
-    - "app/Console/cake Migrations.migration all"
-  after_build:
-    - "mv app/Config/database.php.pagoda app/Config/database.php"
 
 db1:
   name: shanto
