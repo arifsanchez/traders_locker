@@ -30,4 +30,5 @@ after_deploy:
 php_zlib_output_compression: On
 
 db1:
+name: shanto
 type: mysql
