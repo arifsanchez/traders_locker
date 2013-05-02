@@ -10,7 +10,7 @@ shared_writable_dirs:
 - app/tmp/logs
 - app/tmp/sessions
 - app/tmp/tests
-- app/webroot/img/
+- app/webroot/img
 php_extensions:
 - mcrypt
 - mbstring
