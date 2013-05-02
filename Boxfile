@@ -20,6 +20,7 @@ web1:
     - "app/Console/cake Migrations.migration all"
   after_build:
     - "mv app/Config/database.php.pagoda app/Config/database.php"
+    - "mv app/Config/core.php.pagoda app/Config/core.php"
 
 db1:
   name: shanto
