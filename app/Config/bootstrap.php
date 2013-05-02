@@ -72,6 +72,12 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 
+CakePlugin::loadAll(array(
+    'Usermgmt' => array('routes' => true, 'bootstrap' => true),
+    'DebugKit',
+    'Migrations'
+));
+
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter . By Default CakePHP bundles two filters:
  *

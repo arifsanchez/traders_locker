@@ -33,8 +33,11 @@
  * In production mode, flash messages redirect after a time interval.
  * In development mode, you need to click the flash message to continue.
  */
-	Configure::write('debug', 2);
-
+	if ($_SERVER['SERVER_NAME'] == 'localhost') {
+        Configure::write('debug', 2);
+    } else {
+        Configure::write('debug', 0);
+    }
 /**
  * Configure the Error handler used to handle errors for your application. By default
  * ErrorHandler::handleError() is used. It will display errors using Debugger, when debug > 0
@@ -191,15 +194,8 @@
 		'defaults' => 'php'
 	));
 
-/**
- * A random string used in security hashing methods.
- */
-	Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
-
-/**
- * A random numeric string (digits only) used to encrypt/decrypt strings.
- */
-	Configure::write('Security.cipherSeed', '76859309657453542496749683645');
+	Configure::write('Security.salt', '320a34b6add29edcd04eb724b756b729780018c3a10a74263d9');
+    Configure::write('Security.cipherSeed', '9309652198451298352871312763745355');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).
@@ -239,7 +235,7 @@
  * Uncomment this line and correct your server timezone to fix
  * any date & time related errors.
  */
-	//date_default_timezone_set('UTC');
+	date_default_timezone_set('Europe/London');
 
 /**
  *
@@ -312,6 +308,8 @@
  *       Please check the comments in bootstrap.php for more info on the cache engines available
  *       and their settings.
  */
+
+
 $engine = 'File';
 
 // In development mode, caches should expire quickly.

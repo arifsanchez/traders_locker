@@ -1,0 +1,9 @@
+[submodule "app/Plugin/Usermgmt"]
+	path = app/Plugin/Usermgmt
+	url = git@github.com:arifsanchez/usermanagement_plugin.git
+[submodule "app/Plugin/DebugKit"]
+	path = app/Plugin/DebugKit
+	url = git@github.com:cakephp/debug_kit.git
+[submodule "app/Plugin/Migrations"]
+	path = app/Plugin/Migrations
+	url = git@github.com:CakeDC/migrations.git
