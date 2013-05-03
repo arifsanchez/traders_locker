@@ -28,5 +28,5 @@ web1:
     - apc
 
 db1:
-  name: shanto
+  name: shonta
   type: mysql
