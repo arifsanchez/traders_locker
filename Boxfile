@@ -10,7 +10,7 @@ web1:
     - "mkdir -p app/tmp/logs"
     - "mkdir -p app/tmp/sessions"
     - "mkdir -p app/tmp/tests"
-    - "app/Console/cake Migrations.migration all"
+    - "app/Console/cake Migrations.migration run"
   after_build:
     - "mv app/Config/database.php.pagoda app/Config/database.php"
     - "mv app/Config/core.php.pagoda app/Config/core.php"
@@ -25,6 +25,7 @@ web1:
     - app/tmp/tests
     - app/webroot/img
     - app/webroot/img/publics
+    - app/webroot/img/publics/imagecache
   php_extensions:
     - mcrypt
     - mbstring
