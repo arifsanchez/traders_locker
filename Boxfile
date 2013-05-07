@@ -1,6 +1,7 @@
 # vim: set ft=yaml expandtab tabstop=2 shiftwidth=2 softtabstop=2:
 web1:
   name: ikdashboard
+  php_version: 5.3.8
   document_root: /app/webroot
   before_deploy:
     - "mkdir -p app/tmp/cache/models"
@@ -12,6 +13,7 @@ web1:
     - "app/Console/cake Migrations.migration all"
   after_build:
     - "mv app/Config/database.php.pagoda app/Config/database.php"
+    - "mv app/Config/core.php.pagoda app/Config/core.php"
   shared_writable_dirs:
     - app/tmp
     - app/tmp/cache
@@ -21,11 +23,14 @@ web1:
     - app/tmp/logs
     - app/tmp/sessions
     - app/tmp/tests
+    - app/webroot/img
+    - app/webroot/img/publics
   php_extensions:
     - mcrypt
     - mbstring
     - pdo_mysql
     - apc
+    - curl
 
 db1:
   name: shanto
