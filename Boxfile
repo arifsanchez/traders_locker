@@ -5,11 +5,11 @@ web1:
   document_root: /app/webroot
   before_deploy:
     - "mkdir -p app/tmp/cache/models"
-    - "mkdir app/tmp/cache/persistent"
-    - "mkdir app/tmp/cache/views"
-    - "mkdir app/tmp/logs"
-    - "mkdir app/tmp/sessions"
-    - "mkdir app/tmp/tests"
+    - "mkdir -p app/tmp/cache/persistent"
+    - "mkdir -p app/tmp/cache/views"
+    - "mkdir -p app/tmp/logs"
+    - "mkdir -p app/tmp/sessions"
+    - "mkdir -p app/tmp/tests"
     - "app/Console/cake Migrations.migration all"
   after_build:
     - "mv app/Config/database.php.pagoda app/Config/database.php"
