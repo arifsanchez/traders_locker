@@ -38,3 +38,7 @@ Thumbs.db
 
 # Private Folder
 /private/*
+
+# Image Folder
+/app/webroot/img/publics/*
+/app/webroot/img/publics/imagecache/*
