@@ -37,20 +37,32 @@
  */
 class EmailConfig {
 
-	/*public $default = array(
-		'transport' => 'Mail',
-		'from' => 'no-reply@iktrust.com',
-		//'charset' => 'utf-8',
-		//'headerCharset' => 'utf-8',
-	);*/
-	
 	public $default = array(
-	  'port'=>'587',
-	  'timeout'=>'30',
-	  'host' => 'smtp.sendgrid.net',
-	  'username'=>'webteam.iktrust',
-	  'password'=>'oipolloi88',
-	  'client' => 'secure.iktrust-traders.com'
+			'transport' => 'Smtp',
+			'from' => array('support@iktrust.com' => 'IK Trust'),
+			'host' => 'mail.iktrust.com',
+			'port' => 587,
+			'timeout' => 30,
+			'username' => 'support@iktrust.com',
+			'password' => 'Supp00rt5678$%',
+			'client' => null,
+			'log' => false,
+			'charset' => 'utf-8',
+			'headerCharset' => 'utf-8',
+	);
+	
+	public $smtp = array(
+		'transport' => 'Smtp',
+		'from' => array('support@iktrust.com' => 'IK Trust'),
+		'host' => 'mail.iktrust.com',
+		'port' => 587,
+		'timeout' => 30,
+		'username' => 'support@iktrust.com',
+		'password' => 'Supp00rt5678$%',
+		'client' => null,
+		'log' => false,
+		'charset' => 'utf-8',
+		'headerCharset' => 'utf-8',
 	);
 
 	/*
