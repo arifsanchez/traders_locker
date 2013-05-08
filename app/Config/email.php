@@ -38,17 +38,9 @@
 class EmailConfig {
 
 	public $default = array(
-			'transport' => 'Smtp',
-			'from' => array('support@iktrust.com' => 'IK Trust'),
-			'host' => 'mail.iktrust.com',
-			'port' => 587,
-			'timeout' => 30,
-			'username' => 'support@iktrust.com',
-			'password' => 'Supp00rt5678$%',
-			'client' => null,
-			'log' => false,
-			'charset' => 'utf-8',
-			'headerCharset' => 'utf-8',
+		'transport' => 'Mail',
+		'from' => array('support@iktrust.com' => 'IK Trust'),
+
 	);
 	
 	public $smtp = array(
