@@ -44,31 +44,7 @@
 	?>
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<li class="active">
-							<a href="/">
-								<i class="icon-home"></i>
-								Home
-							</a>
-						</li>
-					</ul>
-
-					<ul class="nav pull-right">
-						<li>
-							<a href="/login">Login</a>
-						</li>
-						<li>
-							<a href="/register">Register</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+    
 	<div class="container">
 		<div class="content">
 			<?php echo $this->element('Usermgmt.message'); ?>
