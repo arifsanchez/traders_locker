@@ -33,5 +33,5 @@ web1:
     - curl
 
 db1:
-  name: dashboard
+  name: shonta
   type: mysql
