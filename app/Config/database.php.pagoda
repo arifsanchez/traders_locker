@@ -6,16 +6,32 @@ define("DB_USER", $_SERVER['DB1_USER']);
 define("DB_PASS", $_SERVER['DB1_PASS']);
 define("DB_PORT", $_SERVER['DB1_PORT']);
  
+define("DB_2_HOST", $_SERVER['MTDB_URL']);
+define("DB_2_NAME", $_SERVER['MTDB_NAME']);
+define("DB_2_USER", $_SERVER['MTDB_ORANG']);
+define("DB_2_PASS", $_SERVER['MTDB_PASS']);
+
 class DATABASE_CONFIG {
  
-public $default = array(
-'datasource' => 'Database/Mysql',
-'persistent' => false,
-'host' => DB_HOST,
-'login' => DB_USER,
-'password' => DB_PASS,
-'database' => DB_NAME,
-'prefix' => '',
-'port' => DB_PORT,
-);
+	public $default = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => DB_HOST,
+		'login' => DB_USER,
+		'password' => DB_PASS,
+		'database' => DB_NAME,
+		'prefix' => '',
+		'port' => DB_PORT,
+	);
+
+	public $mt4 = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => DB_2_HOST,
+		'login' => DB_2_USER,
+		'password' => DB_2_PASS,
+		'database' => DB_2_NAME,
+		'prefix' => '',
+		'port' => '',
+	);
 }
